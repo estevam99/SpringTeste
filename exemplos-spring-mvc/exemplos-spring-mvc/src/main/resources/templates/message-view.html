@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Post</title>
+    </head>
+    <body>
+    <marquee>
+        <h1>Arquivo message-view.html</h1></marquee>
+    <div>
+        <h1>sexo?</h1>
+    </div>
+    
+    <form th:object=${dados} action="/dados/salvar" method="post">
+        <input type="text" th:field="*{nome}" required ><br />
+        <input type="email" th:field="*{email}" required><br />
+        <input type="number" min="1" max="99" th:field="*{numero}"><br />
+        <input type="password" th:field="*{senha}" required>
+        <button type="submit">Submeter</button>
+    </form>
+    
+    
+    
+    </body>
+</html>
